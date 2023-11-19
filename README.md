@@ -13,6 +13,6 @@ When working on your story, go to the Build tab and click on Proof to use CopyPa
 You can exclude passages from being displayed in CopyPaste by adding a TODO tag to the passages you want to exclude.
 
 ## Developer's Guide
-If you want to work with the source, you can clone the repository and use Node to compile the data in src as by executing node compile.js. This will create the format.js file in dist.
+If you want to work with the source, you can clone the repository and use Node to compile the data in src as by executing ```node compile.js```. This will create the format.js file in dist.
 
 Have fun!
