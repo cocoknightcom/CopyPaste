@@ -14,7 +14,7 @@ const formattedHTML = htmlContent
 
 const formatObject = {
     name: "CopyPaste",
-    version: "1.1.0",
+    version: "1.1.1",
     url: "https://github.com/cocoknightcom/CopyPaste",
     author: "cocoknightcom",
     description: "A Twine 2 Proofing Story Format that cuts it. Exclude passages with a TODO tag.",
