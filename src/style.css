@@ -1,6 +1,6 @@
 html, body, .container {
 	color: #303030;
-	font-family: 'SF Pro', 'Helvetica Neue', Helvetica, Arial, serif;;
+	font-family: 'SF Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	margin: 0;
 	padding: 0;

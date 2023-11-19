@@ -3,7 +3,7 @@
   <defs>
     <style>
       .cls-1 {
-        font-family: Helvetica-Light, Helvetica;
+        font-family: 'SF Pro', 'Helvetica Neue', Helvetica, Arial, serif;
         font-size: 21px;
         font-weight: 300;
       }
