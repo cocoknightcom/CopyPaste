@@ -19,7 +19,7 @@ const formatObject = {
     author: "cocoknightcom",
     description: "A Twine 2 Proofing Story Format that cuts it. Exclude passages with a TODO tag.",
     license: "MIT",
-    image: "../icon.svg",
+    image: "icon.svg",
     proofing: true,
     source: formattedHTML
 };
