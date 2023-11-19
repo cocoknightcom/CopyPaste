@@ -1,6 +1,8 @@
 # CopyPaste
 A Twine 2 Proofing Story Format that cuts it.
 
+<img src="dist/icon.svg" width="33%" height="33%">
+
 ## Introduction
 CopyPaste was created with cross-tool story development in mind and aims to facilitate extracting the content from Twine (including passage titles) and easily use it in tools such as Obsidian and LLMs.
 
