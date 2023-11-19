@@ -6,7 +6,7 @@ CopyPaste was created with cross-tool story development in mind and aims to faci
 
 ## User's Guide
 Open Twine and navigate to the Twine tab. Click on Story Formats and then on Add.
-Copy and paste the link to the format.js file in the dist folder (https://github.com/cocoknightcom/CopyPaste/dist/format.js) into the Add form and click Add.
+Copy and paste the link to the format.js file in the dist folder ([format.js](https://cocoknight.com/CopyPaste/dist/format.js)) into the Add form and click Add.
 CopyPaste should now appear as one of your Current Story Formats.
 Select it and click Use to Proof Stories.
 When working on your story, go to the Build tab and click on Proof to use CopyPaste.
