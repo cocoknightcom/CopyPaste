@@ -51,9 +51,6 @@ a.btn {
 	background-color: rgb(46, 114, 224);
 	text-decoration: none;
 }
-tw-storydata, tw-passagedata {
-    display: block !important;
-}
 h1, h2, h3, h4, p, tw-passagedata {
     padding: 0 20% 2% 20%;
 }
