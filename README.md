@@ -6,6 +6,9 @@ A Twine 2 Proofing Story Format that cuts it.
 ## Introduction
 CopyPaste was created with cross-tool story development in mind and aims to facilitate extracting content from Twine 2 (including passage titles) for easy use in tools such as Obsidian and LLMs.
 
+### News
+- Version 1.1.6 released! This version comes with a new toggle button to switch between excluding ```TODO``` passages and showing only ```TODO``` passages.
+
 ### Features
 - CopyPaste allows you to exclude passages from being displayed during proofing. Simply add a ```TODO``` tag to the passages you want to exclude. Use the new toggle button to invert this effect!
 - The passage titles are selectable and come with ```##```, making them recognizable as titles by other tools.
