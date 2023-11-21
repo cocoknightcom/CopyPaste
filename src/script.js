@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
         passages.forEach(function (passage) {
             var passageTags = passage.getAttribute('tags');
 
-            // Check if the passage should be included based on 'tags' attribute
-            if ((isTodo && passageTags && passageTags.includes('TODO')) || (!isTodo && (!passageTags || !passageTags.includes('TODO')))) {
+            if ((isTodo && passageTags && passageTags.includes('TODO') && !passageTags.includes('EXCLUDE')) ||
+                (!isTodo && (!passageTags || (!passageTags.includes('TODO') && !passageTags.includes('EXCLUDE'))))) {
                 // Get the 'name' attribute value
                 var passageName = passage.getAttribute('name');
 
