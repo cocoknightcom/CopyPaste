@@ -42,8 +42,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Get the 'name' attribute value
                 var passageName = passage.getAttribute('name');
 
+                // Extract strings in parentheses and remove them from the content
+                var passageContent = passage.textContent.replace(/\(.*?\)/g, '');
+
+                // Trim leading and trailing whitespace and line breaks
+                passageContent = passageContent.trim();
+
                 // Replace plain text line breaks with HTML line breaks
-                var passageContent = passage.textContent.replace(/\n/g, '<br>');
+                passageContent = passageContent.replace(/\n/g, '<br>');
 
                 // Create an h2 element
                 var h2 = document.createElement('h2');

@@ -9,7 +9,7 @@ html, body, .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e6e7f0 url('cC2560x1440closer.jpg') no-repeat 50% 0%;
+  background: #e6e7f0;
   background-size: poster;
 }
 .wrapper {
