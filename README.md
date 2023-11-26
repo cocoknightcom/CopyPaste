@@ -7,8 +7,12 @@ A Twine 2 Proofing Story Format that cuts it.
 CopyPaste was created with cross-tool story development in mind and aims to facilitate extracting content from Twine 2 (including passage titles) for easy use in tools such as Obsidian and LLMs.
 
 ### News
-- Version 1.1.7 released! CopyPaste now always excludes passages with an ```EXCLUDE``` tag
-- Version 1.1.6 released! This version comes with a new toggle button to switch between excluding ```TODO``` passages and showing only ```TODO``` passages.
+- Versino 1.2.0 released! Content in parentheses is now excluded (this is aimed at logic blocks).
+- New since version 1.1.7: CopyPaste now always excludes passages with an ```EXCLUDE``` tag.
+- New since version 1.1.6: This version comes with a new toggle button to switch between excluding ```TODO``` passages and showing only ```TODO``` passages.
+#### Roadmap
+- Toggle button to include exclude logic blocks
+- Select custom tags to include/exclude
 
 ### Features
 - CopyPaste allows you to exclude passages from being displayed during proofing. Simply add an ```EXCLUDE``` tag to the passages you want to exclude.
