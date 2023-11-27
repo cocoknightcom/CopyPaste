@@ -7,15 +7,14 @@ A Twine 2 Proofing Story Format that cuts it. Filter passages by tag.
 CopyPaste was created with cross-tool story development in mind and aims to facilitate extracting content from Twine 2 (including passage titles) for easy use in tools such as Obsidian and LLMs.
 
 ### News
-- Version 1.2.7 released! New filter menu added that you can use with any of your tags!
-- Since 1.2.0 released: Content in parentheses is now excluded (this is aimed at logic blocks).
-#### Roadmap
-- Toggle button to include exclude logic blocks
+- Version 1.3.5 released! Logic blocks can now be toggled using the switch at the bottom of the filter menu.
+- Since 1.2.7: New filter menu added that you can use with any of your tags!
+- Since 1.2.0: Content in parentheses is now excluded (this is aimed at logic blocks).
 
 ### Features
 - CopyPaste allows you to filter (by tag) the passages to be displayed during proofing.
 - The passage titles are selectable and come with ```##```, making them recognizable as titles by other tools.
-- Logic blocks are not displayed. (In fact, any content in parentheses is not being displayed.)
+- Logic blocks can be toggled using the switch at the bottom of the filter menu. (In fact, any content in parentheses is toggled. Let me know if you encounter issues with this feature.)
 
 ## User's Guide
 
@@ -29,7 +28,7 @@ CopyPaste was created with cross-tool story development in mind and aims to faci
 2. (Optional) Add tags to your passages.
 3. While working on your story, go to the Build tab and click on Proof to use CopyPaste.
 4. Your story will appear in your browser, ready to copy and paste into the tool of your choice.
-5. Use the new filter menu to include/exclude passages by tag.
+5. Use the filter menu to include/exclude passages by tag. Use the switch at the bottom of the filter menu to toggle logic blocks.
 
 ## Developer's Guide
 If you want to work with the source, clone the repository and use Node to compile the data from src by executing ```node compile.js```. This will create the format.js file in dist.
