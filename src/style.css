@@ -4,6 +4,8 @@ html, body, .container {
 	font-size: 15px;
 	margin: 0;
 	padding: 0;
+	-webkit-user-select: none;
+	user-select: none;
 }
 .container {
   display: flex;
@@ -24,6 +26,8 @@ html, body, .container {
 }
 .content {
   text-align: left;
+  -webkit-user-select: text;
+  user-select: text;
 }
 h1 {
 	margin-top: 15px;
@@ -51,16 +55,20 @@ a.btn {
 	background-color: rgb(46, 114, 224);
 	text-decoration: none;
 }
-h1, h2, h3, h4, p, tw-passagedata {
+label, button {
+	-webkit-user-select: none;
+	user-select: none;
+}
+h1, h2, h3, h4, p {
     padding: 0 20% 2% 20%;
 }
 @media (min-width: 481px) and (max-width: 767px) {
-	h1, h2, h3, h4, p, tw-passagedata {
+	h1, h2, h3, h4, p {
 	  padding: 0 5% 2% 5%;
 	}
 }
 @media (min-width: 320px) and (max-width: 480px) {
-	h1, h2, h3, h4, p, tw-passagedata {
+	h1, h2, h3, h4, p {
 	  padding: 0 5% 2% 5%;
 	}
 }
