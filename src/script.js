@@ -134,6 +134,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Variable to store the state of extracting strings in parentheses
     var extractStrings = true;
+    
+    function removeNestedParentheses(input) {
+        let output = '';
+        let depth = 0;
+    
+        for (let char of input) {
+            if (char === '(') {
+                depth++;
+            } else if (char === ')') {
+                depth--;
+            } else if (depth === 0) {
+                output += char;
+            }
+        }
+    
+        return output;
+    }
 
     // Function to filter elements based on selected tags and untagged option
     function filterElements(selectedTags, includeUntagged) {
@@ -154,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Extract strings in parentheses and remove them from the content if enabled
                 var passageContent = passage.textContent;
                 if (extractStrings) {
-                    passageContent = passageContent.replace(/\(.*?\)/g, '');
+                    passageContent = removeNestedParentheses(passageContent);
                 }
 
                 // Trim leading and trailing whitespace and line breaks
