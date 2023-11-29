@@ -62,6 +62,13 @@ label, button {
 h1, h2, h3, h4, p {
     padding: 0 20% 2% 20%;
 }
+p code {
+	display: inline-block;
+	padding: 0.1em 0.7em 0.2em 0.6em;
+	color: #e6e7f0;
+	background-color: #404040;
+	border-radius: 4px;
+}
 @media (min-width: 481px) and (max-width: 767px) {
 	h1, h2, h3, h4, p {
 	  padding: 0 5% 2% 5%;
