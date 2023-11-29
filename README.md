@@ -7,9 +7,9 @@ A Twine 2 Proofing Story Format that cuts it. Filter passages by tag.
 CopyPaste was created with cross-tool story development in mind and aims to facilitate extracting content from Twine 2 (including passage titles) for easy use in tools such as Obsidian and LLMs.
 
 ### News
-- Version 1.3.5 released! Logic blocks can now be toggled using the switch at the bottom of the filter menu.
+- Version 1.4.2 released! Logic blocks are now prettier and don't leave unwanted line breaks behind when toggled off.
+- Since 1.3.5: Logic blocks can now be toggled using the switch at the bottom of the filter menu.
 - Since 1.2.7: New filter menu added that you can use with any of your tags!
-- Since 1.2.0: Content in parentheses is now excluded (this is aimed at logic blocks).
 
 ### Features
 - CopyPaste allows you to filter (by tag) the passages to be displayed during proofing.
