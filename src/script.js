@@ -151,9 +151,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     output += '<code' + display + '>';
                 }
                 depth++;
+                output += char;
                 skipWhitespace = false; // Reset the flag when an opening parenthesis is encountered
             } else if (char === ')') {
                 depth--;
+                output += char;
                 if (depth === 0) {
                     output += '</code>';
                     skipWhitespace = true; // Set the flag to skip whitespace before the next line break
