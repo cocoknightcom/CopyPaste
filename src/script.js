@@ -135,29 +135,54 @@ document.addEventListener('DOMContentLoaded', function () {
     // Variable to store the state of extracting strings in parentheses
     var extractStrings = true;
     
-    function wrapNestedParentheses(input, hide) {
+    function wrapNestedDelimiters(input, hide) {
         let output = '';
-        let depth = 0;
+        let depthParentheses = 0;
+        let depthAngleBrackets = 0;
         let display = '';
         let skipWhitespace = false;
+        let codeContent = '';
     
         if (hide) {
             display = ' style="display: none !important"';
         }
     
-        for (let char of input) {
+        function escapeHtml(str) {
+            return str.replace(/&/g, '&amp;')
+                      .replace(/</g, '&lt;')
+                      .replace(/>/g, '&gt;');
+        }
+    
+        for (let i = 0; i < input.length; i++) {
+            let char = input[i];
             if (char === '(') {
-                if (depth === 0) {
-                    output += '<code' + display + '>';
+                if (depthParentheses === 0 && depthAngleBrackets === 0) {
+                    codeContent = '';
                 }
-                depth++;
-                output += char;
+                depthParentheses++;
+                codeContent += char;
                 skipWhitespace = false; // Reset the flag when an opening parenthesis is encountered
             } else if (char === ')') {
-                depth--;
-                output += char;
-                if (depth === 0) {
-                    output += '</code>';
+                depthParentheses--;
+                codeContent += char;
+                if (depthParentheses === 0 && depthAngleBrackets === 0) {
+                    output += '<code' + display + '>' + escapeHtml(codeContent) + '</code>';
+                    skipWhitespace = true; // Set the flag to skip whitespace before the next line break
+                }
+            } else if (char === '<' && input[i + 1] === '<') {
+                if (depthAngleBrackets === 0 && depthParentheses === 0) {
+                    codeContent = '';
+                }
+                depthAngleBrackets++;
+                codeContent += '<<';
+                i++; // Skip the next '<' character
+                skipWhitespace = false; // Reset the flag when an opening angle bracket is encountered
+            } else if (char === '>' && input[i + 1] === '>') {
+                depthAngleBrackets--;
+                codeContent += '>>';
+                i++; // Skip the next '>' character
+                if (depthAngleBrackets === 0 && depthParentheses === 0) {
+                    output += '<code' + display + '>' + escapeHtml(codeContent) + '</code>';
                     skipWhitespace = true; // Set the flag to skip whitespace before the next line break
                 }
             } else if (char === '\n' || char === '\r') {
@@ -170,16 +195,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (skipWhitespace) {
                     continue; // Skip whitespace if the flag is set
                 }
-                output += char;
+                if (depthParentheses > 0 || depthAngleBrackets > 0) {
+                    codeContent += char;
+                } else {
+                    output += char;
+                }
             } else {
-                output += char;
+                if (depthParentheses > 0 || depthAngleBrackets > 0) {
+                    codeContent += char;
+                } else {
+                    output += char;
+                }
                 skipWhitespace = false; // Reset the flag when a non-whitespace character is encountered
             }
         }
     
         return output;
-    }
-    
+    }    
 
     // Function to filter elements based on selected tags and untagged option
     function filterElements(selectedTags, includeUntagged) {
@@ -199,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Extract strings in parentheses and remove them from the content if enabled
                 var passageContent = passage.textContent;
-                passageContent = wrapNestedParentheses(passageContent, extractStrings);
+                passageContent = wrapNestedDelimiters(passageContent, extractStrings);
 
                 // Trim leading and trailing whitespace and line breaks
                 passageContent = passageContent.trim();
