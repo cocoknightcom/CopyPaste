@@ -122,7 +122,7 @@ out
 
 # VSCode
 .vscode-test
-.code-workspace
+*.code-workspace
 
 # yarn v2
 .yarn/cache
